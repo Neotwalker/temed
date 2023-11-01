@@ -609,8 +609,8 @@ $(function () {
 		slidesToScroll: 1,
 		centerMode: true,
 		variableWidth: true,
-		prevArrow: $('.prev'),
-		nextArrow: $('.next'),
+		prevArrow: $('.single--item__slider--prev'),
+		nextArrow: $('.single--item__slider--next'),
 		swipe: false,
 		responsive: [
 			{
