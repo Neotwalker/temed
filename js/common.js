@@ -3,6 +3,10 @@ $(function () {
 	let $header = $('.header--wrapper');
 	let prevScrollPos = $(window).scrollTop();
 
+	$('.page--information__close').click(function() {
+		$('.page--information').hide();
+	});
+
 	$(window).on('scroll', function () {
 		let scrollPos = $(window).scrollTop();
 		if (scrollPos >= 800) {
