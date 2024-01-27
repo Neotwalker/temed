@@ -182,10 +182,10 @@ $(function () {
 			$('.submenu-1').toggleClass('active');
 			$('.submenu-2').parent('li').toggleClass('hover');
 		});
-	} else if (window.innerWidth <= 992){
-		$('.menu .list li').click(function(){
-			$(this).find('.submenu').toggleClass('active');
-			$(this).find('span').toggleClass('current');
+	} else {
+		$('.menu .list li > span').click(function(){
+			$(this).parent().find('.submenu').toggleClass('active');
+			$(this).toggleClass('current');
 		});
 	}
 
