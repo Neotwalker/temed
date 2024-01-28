@@ -774,6 +774,37 @@ $(function () {
 		]
 	});
 
+	$('.main--awadrs__slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		arrows: true,
+		prevArrow: $('.main--awadrs__prev'),
+		nextArrow: $('.main--awadrs__next'),
+		responsive: [
+			{
+				breakpoint: 1201,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 421,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			},
+		]
+	})
+
 	const circles = document.querySelectorAll(".progress--ring__circle");
 	const targetElement = document.querySelector('.services--resorptionFalling');
 	if (targetElement){
