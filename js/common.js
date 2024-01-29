@@ -64,6 +64,12 @@ $(function () {
 		$('html').addClass('overlay');
 	});
 
+	$('.open--review').click(function (e){
+		e.preventDefault();
+		$('.modal--review').addClass('active');
+		$('html').addClass('overlay');
+	})
+
 	$('.search').click(function (e) {
 		e.preventDefault();
 		$('.search--widget').addClass('active');
@@ -803,7 +809,7 @@ $(function () {
 				}
 			},
 		]
-	})
+	});
 
 	const circles = document.querySelectorAll(".progress--ring__circle");
 	const targetElement = document.querySelector('.services--resorptionFalling');

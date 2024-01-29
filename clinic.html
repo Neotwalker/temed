@@ -838,7 +838,7 @@
 									<span class="h4 accent--color"><strong>Нам очень важно знать ваше мнение</strong>, чтобы мы могли становиться лучше.</span>
 									<span class="p accent--color">Здесь вы можете оставить свой отзыв, пожелание, благодарность врачу</span>
 								</div>
-								<a href="#" class="button button--red">Оставить отзыв</a>
+								<a href="#" class="button button--red open--review">Оставить отзыв</a>
 							</div>
 						</div>
 					</div>
@@ -1384,6 +1384,36 @@
 					<input class="phone--input" type="text" name="phone" placeholder="+7 (999) 999-99-99" required>
 				</div>
 				<button class="button button--accent">Записаться на прием</button>
+				<span>Нажимая на&nbsp;кнопку, я&nbsp;подтверждаю, что ознакомлен и&nbsp;согласен с&nbsp;условиями <a href="#">политики конфиденциальности и&nbsp;правилами обработки персональных данных.</a></span>
+			</form>
+		</div>
+	</div>
+	<div class="modal modal--review">
+		<span class="modal--close">
+			<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1"
+				xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<g class="g" stroke="none" stroke-width="1" fill-rule="evenodd">
+					<rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) "
+						x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+					<rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) "
+						x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+				</g>
+			</svg>
+		</span>
+		<div class="modal--wrapper">
+			<div class="modal--wrapper__title h3 text-center">Оставьте ваш отзыв</div>
+			<form action="#" class="form">
+				<input type="text" placeholder="ФИО*" required>
+				<input type="text" placeholder="Email*" required>
+				<div class="select--wrapper">
+					<select name="doctor" id="doctor">
+						<option value="Врач">Врач</option>
+						<option value="Амирбекян Армен Вачаганович">Амирбекян Армен Вачаганович</option>
+						<option value="Бартенев Роман Вадимович">Бартенев Роман Вадимович</option>
+					</select>
+				</div>
+				<textarea name="review" id="review" cols="30" rows="10" placeholder="Ваш отзыв"></textarea>
+				<button class="button button--accent">Отправить</button>
 				<span>Нажимая на&nbsp;кнопку, я&nbsp;подтверждаю, что ознакомлен и&nbsp;согласен с&nbsp;условиями <a href="#">политики конфиденциальности и&nbsp;правилами обработки персональных данных.</a></span>
 			</form>
 		</div>
