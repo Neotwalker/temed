@@ -861,19 +861,16 @@ $(function () {
 		const accContent = accSection.querySelector('.answer > *');
 		
 		accHeader.addEventListener('click', () => {
-			// Удаляем класс active у всех questions
-			questions.forEach((question) => {
-				question.classList.remove('active');
-				question.querySelector('.answer').style.maxHeight = "0px"; // Добавляем max-height: 0 у неактивных questions
-			});
-			
-			// Добавляем класс active и задаем max-height для нажатого question
-			accSection.classList.add("active");
-			
-			if ( accSection.classList.contains("active") ) {
-				accBody.style.maxHeight = `${accContent.clientHeight}px`;
-			} else {
+			if (accSection.classList.contains("active")) {
+				accSection.classList.remove("active");
 				accBody.style.maxHeight = "0px";
+			} else {
+				questions.forEach((question) => {
+					question.classList.remove('active');
+					question.querySelector('.answer').style.maxHeight = "0px";
+				});
+				accSection.classList.add("active");
+				accBody.style.maxHeight = `${accContent.clientHeight}px`;
 			}
 		});
 	});
