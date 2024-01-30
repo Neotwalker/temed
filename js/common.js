@@ -904,6 +904,34 @@ $(function () {
 		]
 	});
 
+	$('.articles--slider__slides').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow: $('.articles--prev'),
+		nextArrow: $('.articles--next'),
+		responsive: [
+			{
+				breakpoint: 993,
+				settings: {
+					swipe: true,
+					slidesToShow: 2,
+					variableWidth: false,
+					centerMode: false
+				}
+			},
+			{
+				breakpoint: 521,
+				settings: {
+					swipe: true,
+					slidesToShow: 1,
+					variableWidth: false,
+					centerMode: false
+				}
+			},
+		]
+	});
+
 	var items = Array.from(document.querySelectorAll('.articles--single__item'));
 	var showMoreButton = document.querySelector('.articles--single .button');
 	var categoryLinks = Array.from(document.getElementsByClassName('category-link'));
