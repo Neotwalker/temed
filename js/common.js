@@ -1321,31 +1321,29 @@ $(function () {
 		});
 	});
 
-	// const goTop = document.querySelector('.goTop');
-	// const socialFixed = document.querySelector('.social--fixed');
-	// if (goTop && socialFixed){
-	// 	window.addEventListener('scroll', function() {
-	// 		var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-	// 		var goTopButton = document.querySelector('.goTop');
+	const goTop = document.querySelector('.goTop');
+	const socialFixed = document.querySelector('.social--fixed');
+	if (goTop){
+		window.addEventListener('scroll', function() {
+			var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+			var goTopButton = document.querySelector('.goTop');
 	
-	// 		if (scrollPosition >= 840) {
-	// 			goTopButton.classList.add('active');
-	// 			socialFixed.classList.add('active')
-	// 		} else {
-	// 			goTopButton.classList.remove('active');
-	// 			socialFixed.classList.remove('active')
+			if (scrollPosition >= 840) {
+				goTopButton.classList.add('active');
+			} else {
+				goTopButton.classList.remove('active');
 
-	// 		}
-	// 	});
+			}
+		});
 	
-	// 	goTop.addEventListener('click', function() {
-	// 		goTop.classList.remove('active');
-	// 		window.scrollTo({
-	// 			top: 0,
-	// 			behavior: "smooth"
-	// 		});
-	// 	});
-	// }
+		goTop.addEventListener('click', function() {
+			goTop.classList.remove('active');
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+		});
+	}
 
 	const socialButton = document.querySelector('.social--wrapper__button');
 	if (socialButton){
