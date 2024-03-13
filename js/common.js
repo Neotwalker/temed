@@ -1345,15 +1345,6 @@ $(function () {
 		});
 	}
 
-	const socialButton = document.querySelector('.social--wrapper__button');
-	if (socialButton){
-		socialButton.addEventListener('click', () => {
-			const socialLinks = document.querySelector('.social--wrapper__links');
-			socialButton.classList.toggle('active');
-			socialLinks.classList.toggle('active');
-		});
-	}
-
 	$('.main--licenses__wrapper').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
