@@ -1345,6 +1345,23 @@ $(function () {
 		});
 	}
 
+	let inputs = document.querySelectorAll('.input__file');
+	Array.prototype.forEach.call(inputs, function (input) {
+		let label = input.nextElementSibling,
+			labelVal = label.querySelector('.input__file--button__text').innerText;
+
+		input.addEventListener('change', function (e) {
+			let countFiles = '';
+			if (this.files && this.files.length >= 1)
+				countFiles = this.files.length;
+
+			if (countFiles)
+				label.querySelector('.input__file--button__text').innerText = 'Выбрано файлов: ' + countFiles;
+			else
+				label.querySelector('.input__file--button__text').innerText = labelVal;
+		});
+	});
+
 	$('.main--licenses__wrapper').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -1659,5 +1676,21 @@ $(function () {
 			bannersRes[index].classList.add('active');
 		});
 	});
+
+	const banner = document.querySelector(".fixed--promotion");
+	setTimeout(function() {
+		if (banner) {
+				banner.classList.add('active');
+		}
+	}, 30000);
+
+	const closeButton = document.querySelector(".fixed--promotion__close");
+
+	if (closeButton && banner) {
+			closeButton.addEventListener("click", function(event) {
+					event.preventDefault(); // Предотвращаем переход по ссылке
+					banner.classList.remove('active'); // Скрываем баннер
+			});
+	}
 
 });
